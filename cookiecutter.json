@@ -15,7 +15,7 @@
     "Click",
     "No command-line interface"
   ],
-  "create_author_file": "y",
+  "create_author_file": "n",
   "open_source_license": [
     "Not open source",
     "MIT license"
