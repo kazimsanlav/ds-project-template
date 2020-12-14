@@ -20,6 +20,32 @@ Features
 
 .. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
 
+Project Structure
+-----------------
+
+| project_slug
+| ├── cache       -> .pkl files
+| ├── data        -> all data goes here
+| │   ├── final   -> read to fit a model
+| │   └── raw     -> coming from db
+| ├── docs        -> can be created with :code:`$ make docs`
+| ├── jobs        -> .sh files for cron jobs
+| ├── keys        -> secret keys (google.json)
+| ├── logs        -> log files
+| ├── models      -> model binaries / coefs
+| ├── notebooks   -> notebooks goes here, suggested naming: *01-kzm-InitalEDA.ipynb*
+| │   ├── adhoc   -> just to get a quick result
+| │   └── utils   -> used frequently, for a specific need
+| ├── src         -> all the source code goes here
+| │   └── project_slug -> python package to distribute / import 
+| ├── tests       -> tests for the package
+| ├── requirements_dev.txt -> development packages (for testing, formating etc.)
+| ├── settings.py -> settings for the project
+| ├── setup.py    -> to make this package pip installable. 
+| ├── Makefile    -> convinient utilitis, :code:`$ make` for help
+| ├── .env        -> env variables (db keys)
+| ├── .gitignore  -> to exclude files/folders from version control 
+| └── README.rst  -> project Readme file
 
 Quickstart
 ----------
@@ -55,6 +81,14 @@ For more details, see the `cookiecutter-pypackage tutorial`_.
 .. _`cookiecutter-pypackage tutorial`: https://cookiecutter-pypackage.readthedocs.io/en/latest/tutorial.html
 
 
+Credits
+-------
+
+This package is forked from `audreyr/cookiecutter-pypackage`_ 
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`kazimsanlav/ds-project-template`: https://github.com/kazimsanlav/ds-project-template
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 
 .. _Travis-CI: http://travis-ci.org/
 .. _Tox: http://testrun.org/tox/
@@ -65,12 +99,6 @@ For more details, see the `cookiecutter-pypackage tutorial`_.
 .. _Punch: https://github.com/lgiordani/punch
 .. _Poetry: https://python-poetry.org/
 .. _PyPi: https://pypi.python.org/pypi
-
-.. _`Nekroze/cookiecutter-pypackage`: https://github.com/Nekroze/cookiecutter-pypackage
-.. _`tony/cookiecutter-pypackage-pythonic`: https://github.com/tony/cookiecutter-pypackage-pythonic
-.. _`ardydedase/cookiecutter-pypackage`: https://github.com/ardydedase/cookiecutter-pypackage
-.. _`lgiordani/cookiecutter-pypackage`: https://github.com/lgiordani/cookiecutter-pypackage
-.. _`briggySmalls/cookiecutter-pypackage`: https://github.com/briggySmalls/cookiecutter-pypackage
 .. _github comparison view: https://github.com/tony/cookiecutter-pypackage-pythonic/compare/audreyr:master...master
 .. _`network`: https://github.com/audreyr/cookiecutter-pypackage/network
 .. _`family tree`: https://github.com/audreyr/cookiecutter-pypackage/network/members
