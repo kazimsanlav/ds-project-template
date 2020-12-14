@@ -42,7 +42,7 @@ Project Structure
 | ├── requirements_dev.txt -> development packages (for testing, formating etc.)
 | ├── settings.py -> settings for the project
 | ├── setup.py    -> to make this package pip installable. 
-| ├── Makefile    -> convinient utilitis, :code:`$ make` for help
+| ├── Makefile    -> convenient utilitis, :code:`$ make` for help
 | ├── .env        -> env variables (db keys)
 | ├── .gitignore  -> to exclude files/folders from version control 
 | └── README.rst  -> project Readme file
