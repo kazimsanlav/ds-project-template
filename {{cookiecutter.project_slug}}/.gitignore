@@ -103,3 +103,13 @@ ENV/
 
 # IDE settings
 .vscode/
+
+# keys
+keys/
+
+# cache
+cache/
+
+# data
+data/
+

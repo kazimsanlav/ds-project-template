@@ -29,6 +29,34 @@
 * Documentation: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io.
 {% endif %}
 
+Project Structure
+-----------------
+
+| {{ cookiecutter.project_slug }}
+| ├── cache       -> .pkl files
+| ├── data        -> all data goes here
+| │   ├── final   -> read to fit a model
+| │   └── raw     -> coming from db
+| ├── docs        -> can be created with :code:`$ make docs`
+| ├── jobs        -> .sh files for cron jobs
+| ├── keys        -> secret keys (google.json)
+| ├── logs        -> log files
+| ├── models      -> model binaries / coefs
+| ├── notebooks   -> notebooks goes here, suggested naming: *01-kzm-InitalEDA.ipynb*
+| │   ├── adhoc   -> just to get a quick result
+| │   └── utils   -> used frequently, for a specific need
+| ├── src         -> all the source code goes here
+| │   └── {{ cookiecutter.project_slug }} -> python package to distribute / import 
+| ├── tests       -> tests for the package
+| ├── requirements_dev.txt -> development packages (for testing, formating etc.)
+| ├── settings.py -> settings for the project
+| ├── setup.py    -> to make this package pip installable. 
+| ├── Makefile    -> convinient utilitis, :code:`$ make` for help
+| ├── .env        -> env variables (db keys)
+| ├── .gitignore  -> to exclude files/folders from version control 
+| └── README.rst  -> project Readme file
+
+
 Features
 --------
 
@@ -37,7 +65,9 @@ Features
 Credits
 -------
 
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+This package was created with Cookiecutter_ and the `kazimsanlav/ds-project-template`_ 
+project template, forked from `audreyr/cookiecutter-pypackage`_ 
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`kazimsanlav/ds-project-template`: https://github.com/kazimsanlav/ds-project-template
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
