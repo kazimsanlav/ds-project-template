@@ -30,7 +30,7 @@ Project Structure
 | │   └── raw     -> coming from db
 | ├── docs        -> can be created with :code:`$ make docs`
 | ├── jobs        -> .sh files for cron jobs
-| ├── keys        -> secret keys (google.json)
+| ├── keys        -> secret keys (slack, db etc.)
 | ├── logs        -> log files
 | ├── models      -> model binaries / coefs
 | ├── notebooks   -> notebooks goes here, suggested naming: *01-kzm-InitalEDA.ipynb*
@@ -43,7 +43,7 @@ Project Structure
 | ├── settings.py -> settings for the project
 | ├── setup.py    -> to make this package pip installable. 
 | ├── Makefile    -> convenient utilitis, :code:`$ make` for help
-| ├── .env        -> env variables (db keys)
+| ├── .env        -> env variables 
 | ├── .gitignore  -> to exclude files/folders from version control 
 | └── README.rst  -> project Readme file
 
