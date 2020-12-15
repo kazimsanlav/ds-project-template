@@ -22,33 +22,32 @@ Features
 
 Project Structure
 -----------------
-
-| project_slug
-| ├── cache       -> .pkl files
-| ├── data        -> all data goes here
-| │   ├── final   -> read to fit a model
-| │   └── raw     -> coming from db
-| ├── docs        -> can be created with :code:`$ make docs`
-| ├── jobs        -> .sh files for cron jobs
-| ├── keys        -> secret keys (slack, db etc.)
-| ├── logs        -> log files
-| ├── models      -> model binaries / coefs
-| ├── notebooks   -> notebooks goes here, suggested naming: *01-kzm-InitalEDA.ipynb*
-| │   ├── adhoc   -> just to get a quick result
-| │   └── utils   -> used frequently, for a specific need
-| ├── src         -> all the source code goes here
-| │   └── project_slug -> python package to distribute / import 
-| ├── tests       -> tests for the package
-| ├── requirements_dev.txt -> development packages (for testing, formating etc.)
-| ├── settings.py -> settings for the project
-| ├── setup.py    -> to make this package pip installable. 
-| ├── Makefile    -> convenient utilitis, :code:`$ make` for help
-| ├── .env        -> env variables 
-| ├── .gitignore  -> to exclude files/folders from version control 
-| └── README.rst  -> project Readme file
+| .
+| > cache ----------------------- .pkl files   
+| > data ------------------------- all data files goes here  
+|   > final -------------------- ready to fit a model  
+|   > raw --------------------- coming directly from db  
+| > docs ------------------------ can be created with :code:`$ make docs`  
+| > jobs ------------------------- .sh files for cron jobs  
+| > keys ------------------------ secret keys (slack, db etc.)  
+| > logs ------------------------- log files  
+| > models --------------------- model binaries / coefs  
+| > notebooks ----------------- notebooks goes here, suggested naming: *01-kzm-InitalEDA.ipynb*  
+|   > adhoc ------------------ just to get a quick result  
+|   > utils -------------------- used frequently, for a specific need  
+| > src -------------------------- all the source code goes here  
+|   > project_slug ---------- python package to distribute / import   
+| > tests ------------------------ tests for the package  
+| > requirements_dev.txt ---- development packages (for testing, formating etc.)  
+| > settings.py ---------------- settings for the project  
+| > setup.py ------------------- to make this package pip installable.   
+| > Makefile ------------------- convenient utilities, :code:`$ make` for help  
+| > .env ------------------------ env variables   
+| > .gitignore ------------------ to exclude files/folders from version control   
+| > README.rst ------------- project Readme file  
 
 Quickstart
-----------
+-----------
 
 Install the latest Cookiecutter if you haven't installed it yet (this requires
 Cookiecutter 1.4.0 or higher)::
@@ -62,16 +61,16 @@ Generate a Python package project::
 Then:
 
 * Create a repo and put it there.
-* Add the repo to your Travis-CI_ account.
+* *(optional)* Add the repo to your Travis-CI_ account.
 * Install the dev requirements into a virtualenv. (``pip install -r requirements_dev.txt``)
-* Register_ your project with PyPI.
-* Run the Travis CLI command ``travis encrypt --add deploy.password`` to encrypt your PyPI password in Travis config
+* *(optional)* Register_ your project with PyPI.
+* *(optional)* Run the Travis CLI command ``travis encrypt --add deploy.password`` to encrypt your PyPI password in Travis config
   and activate automated deployment on PyPI when you push a new tag to master branch.
-* Add the repo to your `Read the Docs`_ account + turn on the Read the Docs service hook.
-* Release your package by pushing a new tag to master.
+* *(optional)* Add the repo to your `Read the Docs`_ account + turn on the Read the Docs service hook.
+* *(optional)* Release your package by pushing a new tag to master.
 * Add a ``requirements.txt`` file that specifies the packages you will need for
   your project and their versions. For more info see the `pip docs for requirements files`_.
-* Activate your project on `pyup.io`_.
+* *(optional)* Activate your project on `pyup.io`_.
 
 .. _`pip docs for requirements files`: https://pip.pypa.io/en/stable/user_guide/#requirements-files
 .. _Register: https://packaging.python.org/tutorials/packaging-projects/#uploading-the-distribution-archives
@@ -86,7 +85,6 @@ Credits
 
 This package is forked from `audreyr/cookiecutter-pypackage`_ 
 
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`kazimsanlav/ds-project-template`: https://github.com/kazimsanlav/ds-project-template
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 
