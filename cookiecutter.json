@@ -1,6 +1,6 @@
 {
   "full_name": "Kazim Sanlav",
-  "email": "kazimsanlav@mail.com",
+  "email": "yourmail@mail.com",
   "github_username": "kazimsanlav",
   "project_name": "ds-project",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",

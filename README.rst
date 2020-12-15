@@ -54,7 +54,7 @@ Cookiecutter 1.4.0 or higher)::
 
     pip install -U cookiecutter
 
-Generate a Python package project::
+Generate a Python Data Science Project::
 
     cookiecutter https://github.com/kazimsanlav/ds-project-template.git
 
