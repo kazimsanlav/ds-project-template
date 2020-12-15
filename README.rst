@@ -23,28 +23,28 @@ Features
 Project Structure
 -----------------
 | .
-| > cache ----------------------- .pkl files   
-| > data ------------------------- all data files goes here  
-|   > final -------------------- ready to fit a model  
-|   > raw --------------------- coming directly from db  
-| > docs ------------------------ can be created with :code:`$ make docs`  
-| > jobs ------------------------- .sh files for cron jobs  
-| > keys ------------------------ secret keys (slack, db etc.)  
-| > logs ------------------------- log files  
+| > cache ---------------------- .pkl files   
+| > data ----------------------- all data files goes here  
+| ---> final ------------------- ready to fit a model  
+| ---> raw --------------------- coming directly from db  
+| > docs ----------------------- can be created with :code:`$ make docs`  
+| > jobs ----------------------- .sh files for cron jobs  
+| > keys ----------------------- secret keys (slack, db etc.)  
+| > logs ----------------------- log files  
 | > models --------------------- model binaries / coefs  
-| > notebooks ----------------- notebooks goes here, suggested naming: *01-kzm-InitalEDA.ipynb*  
-|   > adhoc ------------------ just to get a quick result  
-|   > utils -------------------- used frequently, for a specific need  
-| > src -------------------------- all the source code goes here  
-|   > project_slug ---------- python package to distribute / import   
-| > tests ------------------------ tests for the package  
-| > requirements_dev.txt ---- development packages (for testing, formating etc.)  
+| > notebooks ------------------ notebooks goes here, suggested naming: *01-kzm-InitalEDA.ipynb*  
+| ---> adhoc ------------------- just to get a quick result  
+| ---> utils ------------------- used frequently, for a specific need  
+| > src ------------------------ all the source code goes here  
+| ---> project_slug ------------ python package to distribute / import   
+| > tests ---------------------- tests for the package  
+| > requirements_dev.txt ------- development packages (for testing, formating etc.)  
 | > settings.py ---------------- settings for the project  
 | > setup.py ------------------- to make this package pip installable.   
 | > Makefile ------------------- convenient utilities, :code:`$ make` for help  
-| > .env ------------------------ env variables   
-| > .gitignore ------------------ to exclude files/folders from version control   
-| > README.rst ------------- project Readme file  
+| > .env ----------------------- env variables   
+| > .gitignore ----------------- to exclude files/folders from version control   
+| > README.rst ----------------- project Readme file  
 
 Quickstart
 -----------
