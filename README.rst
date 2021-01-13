@@ -22,29 +22,46 @@ Features
 
 Project Structure
 -----------------
-| .
-| > cache ---------------------- .pkl files   
-| > data ----------------------- all data files goes here  
-| ---> final ------------------- ready to fit a model  
-| ---> raw --------------------- coming directly from db  
-| > docs ----------------------- can be created with :code:`$ make docs`  
-| > jobs ----------------------- .sh files for cron jobs  
-| > keys ----------------------- secret keys (slack, db etc.)  
-| > logs ----------------------- log files  
-| > models --------------------- model binaries / coefs  
-| > notebooks ------------------ notebooks goes here, suggested naming: *01-kzm-InitalEDA.ipynb*  
-| ---> adhoc ------------------- just to get a quick result  
-| ---> utils ------------------- used frequently, for a specific need  
-| > src ------------------------ all the source code goes here  
-| ---> project_slug ------------ python package to distribute / import   
-| > tests ---------------------- tests for the package  
-| > requirements_dev.txt ------- development packages (for testing, formating etc.)  
-| > settings.py ---------------- settings for the project  
-| > setup.py ------------------- to make this package pip installable.   
-| > Makefile ------------------- convenient utilities, :code:`$ make` for help  
-| > .env ----------------------- env variables   
-| > .gitignore ----------------- to exclude files/folders from version control   
-| > README.rst ----------------- project Readme file  
+
+.. code-block:: sql
+
+    .
+    ├── AUTHORS.rst
+    ├── CONTRIBUTING.rst
+    ├── HISTORY.rst
+    ├── LICENSE
+    ├── MANIFEST.in
+    ├── Makefile -------------------- convenient utilities, :code:`$ make` for help  
+    ├── README.rst
+    ├── cache ----------------------- .pkl files
+    ├── configs --------------------- config files
+    │   ├── config.yaml
+    │   └── logging.yaml
+    ├── data ------------------------ data
+    │   ├── final
+    │   └── raw
+    ├── docs ------------------------ docs can be created with :code:`$ make docs`
+    ├── jobs ------------------------ .sh files for cron jobs
+    ├── logs ------------------------ logs files
+    ├── models ---------------------- models ready to use
+    ├── notebooks ------------------- notebooks goes here, suggested naming: *01-kzm-InitalEDA.ipynb*
+    │   ├── adhoc
+    │   └── utils
+    ├── requirements.txt ------------ project requirements
+    ├── requirements_dev.txt -------- dev requirements
+    ├── settings.py
+    ├── setup.cfg
+    ├── setup.py -------------------- make this package pip installable  
+    ├── tests
+    ├── tox.ini
+    ├── .env ------------------------ storing env variables
+    └── {project_slug} -------------- python package to distribute / import
+        ├── __init__.py
+        ├── cli.py
+        ├── config.py --------------- read configs / load dot-env file
+        ├── helpers.py
+        └── {project_slug}.py
+
 
 Quickstart
 -----------
