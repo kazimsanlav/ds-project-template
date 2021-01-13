@@ -35,7 +35,7 @@ def add_folder(folderpath):
 if __name__ == '__main__':
 
     add_env_file()
-    folders_to_add = ['cache', 'data/final', 'data/raw', 'keys', ]
+    folders_to_add = ['cache', 'data/final', 'data/raw' ]
     for folder in folders_to_add:
         add_folder(folder)
 

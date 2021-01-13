@@ -3,13 +3,14 @@ wheel
 watchdog
 flake8
 autopep8
+mypy
 tox
 coverage
 Sphinx
 twine
+jupyterlab
 {% if cookiecutter.command_line_interface|lower == 'click' -%}
 Click==7.0{% endif %}
 {% if cookiecutter.use_pytest == 'y' -%}
 pytest
 pytest-runner{% endif %}
-jupyterlab

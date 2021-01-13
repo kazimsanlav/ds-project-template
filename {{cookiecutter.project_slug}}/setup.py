@@ -58,7 +58,6 @@ setup(
     keywords='{{ cookiecutter.project_slug }}',
     name='{{ cookiecutter.project_slug }}',
     packages=find_packages(where='src'),
-    package_dir={'': 'src'},
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
