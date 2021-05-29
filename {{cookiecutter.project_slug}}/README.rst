@@ -55,7 +55,7 @@ Project Structure
     │   ├── adhoc
     │   └── utils
     └── src
-        └── {project_slug} -------------- python package to distribute / import
+        └── {{ cookiecutter.project_slug }} -------------- python package to distribute / import
             ├── __init__.py
             ├── cli.py
             ├── config.py --------------- read configs / load dot-env file

@@ -3,7 +3,7 @@ base:
     project: "{{cookiecutter.project_name}}" # change it
     python: "~/miniconda3/envs/{{cookiecutter.project_slug}}/bin/python" # change it
     logs: "logs/"
-    log_config: "../configs/logging.yaml"
+    log_config: "configs/logging.yaml"
 
 
 dev:

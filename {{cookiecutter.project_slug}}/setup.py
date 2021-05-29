@@ -23,9 +23,8 @@ readme = read(here/"README.rst")
 
 history = read(here/"HISTORY.rst")
 
-requirements = [{% for req in read(here/'requirements.txt').splitlines() %}'{{req}},\n']
-requirements_dev = [{ % for req in read(here/'requirements_dev.txt').splitlines() %}'{{req}},\n']
-
+requirements = read(here/'requirements.txt').splitlines()
+requirements_dev = read(here/'requirements_dev.txt').splitlines()
 
 setup_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest-runner', {%- endif %} ]
 
