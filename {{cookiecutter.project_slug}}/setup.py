@@ -27,17 +27,17 @@ requirements = read('requirements.txt').splitlines()
 requirements_dev = read('requirements_dev.txt').splitlines()
 
 
-setup_requirements = [{%- if cookiecutter.use_pytest == 'y' % }'pytest-runner', {%- endif % } ]
+setup_requirements = [{%- if cookiecutter.use_pytest == 'y' % }'pytest-runner', {%- endif %} ]
 
-test_requirements = [{%- if cookiecutter.use_pytest == 'y' % }'pytest>=3', {%- endif % } ]
+test_requirements = [{%- if cookiecutter.use_pytest == 'y' % }'pytest>=3', {%- endif %} ]
 
-{% - set license_classifiers = {
+{ % - set license_classifiers = {
     'MIT license': 'License :: OSI Approved :: MIT License',
     'BSD license': 'License :: OSI Approved :: BSD License',
     'ISC license': 'License :: OSI Approved :: ISC License (ISCL)',
     'Apache Software License 2.0': 'License :: OSI Approved :: Apache Software License',
     'GNU General Public License v3': 'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
-} %}
+} % }
 
 # Arguments marked as "Required" below must be included for upload to PyPI.
 # Fields marked as "Optional" may be commented out.
@@ -184,7 +184,7 @@ setup(
     extras_require={  # Optional
         'dev': requirements_dev,
         'test': [{% if cookiecutter.use_pytest == 'y' - %}
-                 'pytest', 'pytest-runner'{% endif % }],
+                 'pytest', 'pytest-runner'{% endif %}],
     },
 
     # If there are data files included in your packages that need to be
@@ -205,17 +205,17 @@ setup(
     # `pip` to create the appropriate form of executable for the target
     # platform.
     #
-    {%- if 'no' not in cookiecutter.command_line_interface|lower % }
+    {%- if 'no' not in cookiecutter.command_line_interface|lower %}
     entry_points={
         'console_scripts': [
             '{{ cookiecutter.project_slug }}={{ cookiecutter.project_slug }}.cli:main',
         ],
     },
-    {%- endif % }
+    {%- endif %}
 
     {%- if cookiecutter.open_source_license in license_classifiers %}
     license="{{ cookiecutter.open_source_license }}",
-    {%- endif % }
+    {%- endif %}
 
     # List additional URLs that are relevant to your project as a dict.
     #
