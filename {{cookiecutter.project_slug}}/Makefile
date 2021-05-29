@@ -73,7 +73,7 @@ coverage: ## check code coverage quickly with the default Python
 docs: ## generate Sphinx HTML documentation, including API docs
 	rm -f docs/{{ cookiecutter.project_slug }}.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/  {{ cookiecutter.project_slug }}
+	sphinx-apidoc -o docs/  src/{{ cookiecutter.project_slug }}
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html
@@ -93,7 +93,7 @@ install: clean ## install the package to the active Python's site-packages
 	python setup.py install
 
 install-edit-mode: clean ## install the package in edit mode to the active Pyhton's site-packages
-	pip install -e .
+	pip install -e ".[dev]"
 
 remove: clean ## remove the package from the active Python's site-packages
 	pip uninstall -y {{ cookiecutter.project_slug }}

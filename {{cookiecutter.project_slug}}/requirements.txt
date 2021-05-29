@@ -1,6 +1,6 @@
 python-dotenv
 python-box
 click
-scikit-learn
-pandas
-numpy
+# scikit-learn
+# pandas
+# numpy

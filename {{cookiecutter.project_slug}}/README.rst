@@ -40,15 +40,13 @@ Project Structure
     ├── HISTORY.rst
     ├── LICENSE
     ├── MANIFEST.in
-    ├── Makefile -------------------- convenient utilities, :code:`$ make` for help  
+    ├── Makefile -------------------- convenient utilities, :code:`$ make` for help
     ├── README.rst
-    ├── cache ----------------------- .pkl files
+    ├── cache ----------------------- data files to be used later on
     ├── configs --------------------- config files
     │   ├── config.yaml
     │   └── logging.yaml
     ├── data ------------------------ data
-    │   ├── final
-    │   └── raw
     ├── docs ------------------------ docs can be created with :code:`$ make docs`
     ├── jobs ------------------------ .sh files for cron jobs
     ├── logs ------------------------ logs files
@@ -56,20 +54,23 @@ Project Structure
     ├── notebooks ------------------- notebooks goes here, suggested naming: *01-kzm-InitalEDA.ipynb*
     │   ├── adhoc
     │   └── utils
+    └── src
+        └── {project_slug} -------------- python package to distribute / import
+            ├── __init__.py
+            ├── cli.py
+            ├── config.py --------------- read configs / load dot-env file
+            ├── helpers.py
+            └── main.py
     ├── requirements.txt ------------ project requirements
     ├── requirements_dev.txt -------- dev requirements
     ├── settings.py
     ├── setup.cfg
-    ├── setup.py -------------------- make this package pip installable  
+    ├── setup.py -------------------- make this package pip installable
     ├── tests
     ├── tox.ini
-    ├── .env ------------------------ storing env variables
-    └── {project_slug} -------------- python package to distribute / import
-        ├── __init__.py
-        ├── cli.py
-        ├── config.py --------------- read configs / load dot-env file
-        ├── helpers.py
-        └── {project_slug}.py
+    ├── pyproject.toml
+    └── .env ------------------------ storing env variables
+
 
 
 Features
@@ -80,8 +81,8 @@ Features
 Credits
 -------
 
-This package was created with Cookiecutter_ and the `kazimsanlav/ds-project-template`_ 
-project template, forked from `audreyr/cookiecutter-pypackage`_ 
+This package was created with Cookiecutter_ and the `kazimsanlav/ds-project-template`_
+project template, forked from `audreyr/cookiecutter-pypackage`_
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`kazimsanlav/ds-project-template`: https://github.com/kazimsanlav/ds-project-template

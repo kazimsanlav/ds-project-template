@@ -19,12 +19,12 @@ def read(fname):
         return f.read()
 
 
-readme = read("README.rst")
+readme = read(here/"README.rst")
 
-history = read("HISTORY.rst")
+history = read(here/"HISTORY.rst")
 
-requirements = read('requirements.txt').splitlines()
-requirements_dev = read('requirements_dev.txt').splitlines()
+requirements = [{% for req in read(here/'requirements.txt').splitlines() %'{{req}},\n'}]
+requirements_dev = [{ % for req in read(here/'requirements_dev.txt').splitlines() % '{{req}},\n'}]
 
 
 setup_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest-runner', {%- endif %} ]
@@ -198,8 +198,7 @@ setup(
     # http://docs.python.org/distutils/setupscript.html#installing-additional-files
     #
     # In this case, 'data_file' will be installed into '<sys.prefix>/my_data'
-    data_files=[('{{ cookiecutter.project_slug }}_data', ['data/*'])],  # Optional #FIXME add this to repo
-
+    data_files=[('{{ cookiecutter.project_slug }}_data', ['data/other_data.dat'])],  # Optional
     # To provide executable scripts, use entry points in preference to the
     # "scripts" keyword. Entry points provide cross-platform support and allow
     # `pip` to create the appropriate form of executable for the target
