@@ -12,8 +12,8 @@
   "use_github_extra": "n",
   "add_pyup_badge": "n",
   "command_line_interface": [
-    "Argparse",
     "Click",
+    "Argparse",
     "No command-line interface"
   ],
   "create_author_file": "n",
