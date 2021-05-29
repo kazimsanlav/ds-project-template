@@ -1,33 +1,33 @@
 base:
   path:
-    project: "/DS/Search/{{cookiecutter.project_name}}"
+    project: "{{cookiecutter.project_name}}" # change it
     python: "~/miniconda3/envs/{{cookiecutter.project_slug}}/bin/python" # change it
     logs: "logs/"
     log_config: "configs/logging.yaml"
 
-  bigq:
-    user:
 
 dev:
+  bigq:
+    destination:
+    
   presto:
     host:
     port:
     username:
 
-  kafka_bootstrap_servers:
-
-  kafka_bootstrap_stage_servers:
-
-  kafka_topic:
+  kafka:
+    bootstrap_servers:
+    topic:
 
 prod:
+  bigq:
+    destination:
+
   presto_prod:
     host:
     port:
     username:
 
-  kafka_bootstrap_servers:
-
-  kafka_bootstrap_stage_servers:
-
-  kafka_topic:
+  kafka:
+    bootstrap_servers:
+    topic:

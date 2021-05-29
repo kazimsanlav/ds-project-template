@@ -5,12 +5,17 @@ import logging.config
 from pathlib import Path
 from dotenv import load_dotenv
 
+try:
+    env = os.environ["ENVIRONMENT"]  # dev/prod
+except KeyError:
+    env = 'dev'
+
+
 env_path = Path('.') / '.env'
 load_dotenv(env_path)
 
 config_path = Path(__file__).parent.parent.parent.joinpath('configs', 'config.yaml')
 
-env = os.environ["ENVIRONMENT"]
 with open(config_path, "r") as config_file:
     full_cfg = yaml.safe_load(config_file)
 
