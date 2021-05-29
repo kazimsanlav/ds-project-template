@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+import shutil
 
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 
@@ -8,12 +9,16 @@ def remove_file(filepath):
     os.remove(os.path.join(PROJECT_DIRECTORY, filepath))
 
 
+def remove_dir(dirpath):
+    shutil.rmtree(dirpath)
+
+
 def add_env_file():
     env_file = """# Load env variables with dotenv package in settings.py (or elsewhere)
 
 ## settings.py
 # from dotenv import load_dotenv
-# from pathlib import Path 
+# from pathlib import Path
 # env_path = Path('.') / '.env'
 # load_dotenv(env_path)
 
@@ -35,7 +40,7 @@ def add_folder(folderpath):
 if __name__ == '__main__':
 
     add_env_file()
-    folders_to_add = ['cache', 'data/final', 'data/raw' ]
+    folders_to_add = ['cache', 'data']
     for folder in folders_to_add:
         add_folder(folder)
 
@@ -49,3 +54,9 @@ if __name__ == '__main__':
 
     if 'Not open source' == '{{ cookiecutter.open_source_license }}':
         remove_file('LICENSE')
+
+    if '{{ cookiecutter.use_pypi_deployment_with_travis }}' != 'y':
+        remove_file('.travis.yml')
+
+    if '{{ cookiecutter.use_github_extra }}' != 'y':
+        remove_dir('.github')

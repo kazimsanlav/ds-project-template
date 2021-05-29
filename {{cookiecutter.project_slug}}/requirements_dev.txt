@@ -11,7 +11,7 @@ sphinxcontrib-napoleon
 twine
 jupyterlab
 {% if cookiecutter.command_line_interface|lower == 'click' -%}
-Click==7.0{% endif %}
+Click{% endif %}
 {% if cookiecutter.use_pytest == 'y' -%}
 pytest
 pytest-runner{% endif %}

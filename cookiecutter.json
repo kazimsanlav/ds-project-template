@@ -1,6 +1,6 @@
 {
   "full_name": "Kazim Sanlav",
-  "email": "yourmail@mail.com",
+  "email": "kazimsanlav@gmail.com",
   "github_username": "kazimsanlav",
   "project_name": "ds-project",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
@@ -9,6 +9,7 @@
   "version": "0.1.0",
   "use_pytest": "y",
   "use_pypi_deployment_with_travis": "n",
+  "use_github_extra": "n",
   "add_pyup_badge": "n",
   "command_line_interface": [
     "Argparse",
